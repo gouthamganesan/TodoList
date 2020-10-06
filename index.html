@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>TODO APP</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- FONT AWESOME
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom_style.css" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <!-- TITLE -->
+      <h1>TODO APP</h1>
+
+      <!-- INPUT FORM -->
+      <form id="input-form" class="row">
+        <div class="ten columns">
+          <input
+            type="text"
+            name="task-name"
+            placeholder="Enter the task name"
+            id="task-name"
+            class="u-full-width"
+          />
+        </div>
+        <div class="two columns">
+          <input
+            type="submit"
+            value="Add"
+            id="input-button"
+            ;
+            class="u-full-width button-primary"
+          />
+        </div>
+      </form>
+
+      <div id="task-lists">
+        <!-- TASK LIST -->
+        <h6>Tasks to do</h6>
+        <hr />
+        <!-- <div class="empty-list">
+          <h6>Add some shit to do</h6>
+        </div> -->
+        <ul id="task-list"></ul>
+
+        <!-- TASK COMPLETED LIST -->
+        <h6>Complete tasks</h6>
+        <hr />
+        <ul id="completed-task-list"></ul>
+      </div>
+    </div>
+
+    <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="app.js"></script>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>

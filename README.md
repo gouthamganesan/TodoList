@@ -12,14 +12,15 @@ Here is the list of all the things that are possible as of now.
 2. Mark them as complete
 3. Mark them as incomplete
 4. Delete them
+5. Filtering
+6. Clearing all tasks
 
 ### Future
 
-1. Storing and retrieving data (persisting data)
-2. Filtering
-3. Counting the number of items in each list
-4. If the list is empty show some message instead of being empty
-5. Proper sorting of tasks
+1. Counting the number of items in each list
+2. If the list is empty show some message instead of being empty
+3. Storing and retrieving data (persisting data)
+4. Proper sorting of tasks
 
 ## CSS Library
 

@@ -206,15 +206,20 @@ function filterTasks(event) {
 
 /* 
   1. Listen for the click event of the clear all task button
-  2. Confirm if they want to remove all
-  3. Select all the task-item class elements using querySelectorAll
-  4. Loop through all of them and remove one by one
+  2. Check if the list is empty. If empty tell them the same. If else,
+  3. Confirm if they want to remove all
+  4. Select all the task-item class elements using querySelectorAll
+  5. Loop through all of them and remove one by one
 */
 
 function clearAllTasks(event) {
-  if (confirm("This will delete all tasks. Are you sure?")) {
-    document.querySelectorAll(".task-item").forEach(function (task) {
-      task.remove();
-    })
+  if (document.querySelectorAll(".task-item").length !== 0) {
+    if (confirm("This will delete all tasks. Are you sure?")) {
+      document.querySelectorAll(".task-item").forEach(function (task) {
+        task.remove();
+      });
+    }
+  } else {
+    alert("The list is already empty");
   }
 }

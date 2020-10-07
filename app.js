@@ -33,6 +33,14 @@
 2. If pushed, check with them if they are sure
 3. Remove the subsequent li element
 
+* Add filtering option
+1. Use the same text field for search input
+2. Listen for keyup event in the text field
+3. Use querySelectorAll for selecting all the task items
+4. Loop through all of them on each event trigger using forEach
+5. Check if the search term is in the (lower cased) task name
+6. If yes, then set the display property of that item to block, if else none
+
 * Upcoming
 - Click on both a or i tag should work for links (check and delete buttons)
 - Count the number of items in each list and display it
@@ -63,6 +71,8 @@ function loadEventsListeners() {
   taskCompletedList.addEventListener("click", unCompleteTask);
   // Deleting a task
   taskLists.addEventListener("click", deleteTask);
+  // Searching for tasks
+  taskTitleInput.addEventListener("keyup", filterTasks);
 }
 
 /* 
@@ -168,4 +178,25 @@ function deleteTask(event) {
       event.target.parentElement.parentElement.remove();
     }
   }
+}
+
+/* 
+███████╗██╗██╗  ████████╗███████╗██████╗     ████████╗ █████╗ ███████╗██╗  ██╗███████╗
+██╔════╝██║██║  ╚══██╔══╝██╔════╝██╔══██╗    ╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝
+█████╗  ██║██║     ██║   █████╗  ██████╔╝       ██║   ███████║███████╗█████╔╝ ███████╗
+██╔══╝  ██║██║     ██║   ██╔══╝  ██╔══██╗       ██║   ██╔══██║╚════██║██╔═██╗ ╚════██║
+██║     ██║███████╗██║   ███████╗██║  ██║       ██║   ██║  ██║███████║██║  ██╗███████║
+╚═╝     ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+*/
+
+function filterTasks(event) {
+  const searchText = event.target.value.toLowerCase();
+  document.querySelectorAll(".task-item").forEach(function (task) {
+    const item = task.children[1].textContent;
+    if(item.toLowerCase().indexOf(searchText) != -1) {
+      task.style.display = 'block';
+    } else {
+      task.style.display = 'none';
+    }
+  });
 }
